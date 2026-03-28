@@ -1,0 +1,611 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-02-09",
+  "checksums": [
+    "6a978c34541b1f0419627797c480938ca5aab7e21b012ed817b2a0e80db14249",
+    "331945cbdd6d34c06d8549b8262c6f589e796925990ce46b1d29df7e423042cf",
+    "588baf1a70358baca0c3ebee8d186dce600194abde3ef3e088ae11fa8c4f1d3b",
+    "565cd0ef8bd875f19845b8acb3868f30e1ac9210ef3328ac771f6a61cfbb6a65",
+    "3ea66b896b547a21f20f2610f3f2208ef22c2599db5924b45970424d1b66e822",
+    "6bdce013a3dfb733fc112751383f43f3975f2bdba060c961103ac82239e3ce7a",
+    "aae84a9a6621fbf30e66b070de000bf1e9e7cf91b5f74d66f8d3c0b99214315d",
+    "3d02976c0dd993617ca7a415ad9941d503ff3f9d830fb0c8d7c581d03fbe8702"
+  ],
+  "models": [
+    {
+      "id": "llama-3.2-1b-instruct-q4_k_xl",
+      "name": "Llama-3.2-1B-Instruct",
+      "url": "https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-UD-Q4_K_XL.gguf",
+      "sizeBytes": 834203680,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Meta Llama 3.2 1B Instruct - ultra compact and fast"
+    },
+    {
+      "id": "llama-3.2-3b-instruct-q4_k_xl",
+      "name": "Llama-3.2-3B-Instruct",
+      "url": "https://huggingface.co/unsloth/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-UD-Q4_K_XL.gguf",
+      "sizeBytes": 2060886464,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Meta Llama 3.2 3B Instruct - excellent quality/size balance"
+    },
+    {
+      "id": "deepseek-r1-distill-llama-8b-q2_k_xl",
+      "name": "DeepSeek-R1-Distill-Llama-8B",
+      "url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF/resolve/main/DeepSeek-R1-Distill-Llama-8B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3388767680,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "DeepSeek R1 distilled to Llama 8B - reasoning model"
+    },
+    {
+      "id": "qwen3.5-0.8b-q4_k_xl",
+      "name": "Qwen3.5-0.8B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/main/Qwen3.5-0.8B-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 558772480,
+      "mmprojSizeBytes": 207346528,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "Qwen3.5 0.8B - ultra compact vision-language model",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "lfm2-8b-a1b-q2_k_xl",
+      "name": "LFM2-8B-A1B",
+      "url": "https://huggingface.co/unsloth/LFM2-8B-A1B-GGUF/resolve/main/LFM2-8B-A1B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3120266304,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "LFM2 8B parameter model with A1B architecture"
+    },
+    {
+      "id": "lfm2-2.6b-exp-q4_k_xl",
+      "name": "LFM2-2.6B-Exp",
+      "url": "https://huggingface.co/unsloth/LFM2-2.6B-Exp-GGUF/resolve/main/LFM2-2.6B-Exp-UD-Q4_K_XL.gguf",
+      "sizeBytes": 1563669120,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "LFM2 2.6B experimental model",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "lfm2.5-1.2b-thinking-q4_k_xl",
+      "name": "LFM2.5-1.2B-Thinking",
+      "url": "https://huggingface.co/unsloth/LFM2.5-1.2B-Thinking-GGUF/resolve/main/LFM2.5-1.2B-Thinking-UD-Q4_K_XL.gguf",
+      "sizeBytes": 730895584,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "LFM2.5 1.2B Thinking - compact Liquid reasoning model",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "lfm2.5-1.2b-instruct-q4_k_xl",
+      "name": "LFM2.5-1.2B-Instruct",
+      "url": "https://huggingface.co/unsloth/LFM2.5-1.2B-Instruct-GGUF/resolve/main/LFM2.5-1.2B-Instruct-UD-Q4_K_XL.gguf",
+      "sizeBytes": 730895584,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "LFM2.5 1.2B Instruct - compact Liquid model",
+      "isRecommended": true,
+      "maxContextSize": 32768
+    },
+    {
+      "id": "gemma-3-1b-it-q4_k_xl",
+      "name": "Gemma-3-1B-it",
+      "url": "https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-UD-Q4_K_XL.gguf",
+      "sizeBytes": 807035168,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Gemma 3 1B instruction-tuned - ultra compact",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "gemma-3-4b-it-q4_k_xl",
+      "name": "Gemma-3-4B-it",
+      "url": "https://huggingface.co/unsloth/gemma-3-4b-it-GGUF/resolve/main/gemma-3-4b-it-UD-Q4_K_XL.gguf",
+      "sizeBytes": 2544288896,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Gemma 3 4B instruction-tuned - balanced performance"
+    },
+    {
+      "id": "gemma-3n-e2b-it-q4_k_xl",
+      "name": "Gemma-3n-E2B-it",
+      "url": "https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/resolve/main/gemma-3n-E2B-it-UD-Q4_K_XL.gguf",
+      "sizeBytes": 3753905504,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Gemma 3n E2B instruction-tuned model",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "gemma-3n-e4b-it-q4_k_xl",
+      "name": "gemma-3n-E4B-it",
+      "url": "https://huggingface.co/unsloth/gemma-3n-E4B-it-GGUF/resolve/main/gemma-3n-E4B-it-UD-Q4_K_XL.gguf",
+      "sizeBytes": 5385042048,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Gemma 3n E4B instruction-tuned model",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "gemma-3-12b-it-q2_k_xl",
+      "name": "Gemma-3-12B-it",
+      "url": "https://huggingface.co/unsloth/gemma-3-12b-it-GGUF/resolve/main/gemma-3-12b-it-UD-Q2_K_XL.gguf",
+      "sizeBytes": 4860535136,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Gemma 3 12B instruction-tuned - high quality"
+    },
+    {
+      "id": "medgemma-1.5-4b-it-q4_k_xl",
+      "name": "MedGemma-1.5-4B-it",
+      "url": "https://huggingface.co/unsloth/medgemma-1.5-4b-it-GGUF/resolve/main/medgemma-1.5-4b-it-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/medgemma-1.5-4b-it-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 2537531456,
+      "mmprojSizeBytes": 839326368,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "Google MedGemma 4B - medical vision-language model for healthcare imaging"
+    },
+    {
+      "id": "rnj-1-instruct-q2_k_xl",
+      "name": "RNJ-1-8B-Instruct",
+      "url": "https://huggingface.co/unsloth/rnj-1-instruct-GGUF/resolve/main/rnj-1-instruct-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3501975200,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "RNJ-1 8B parameter instruction-following model"
+    },
+    {
+      "id": "ministral-3-3b-reasoning-q4_k_xl",
+      "name": "Ministral-3-3B-Reasoning",
+      "url": "https://huggingface.co/unsloth/Ministral-3-3B-Reasoning-2512-GGUF/resolve/main/Ministral-3-3B-Reasoning-2512-UD-Q4_K_XL.gguf",
+      "sizeBytes": 2191961856,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 3B parameter reasoning model - compact and fast",
+      "isRecommended": true
+    },
+    {
+      "id": "ministral-3-8b-reasoning-q2_k_xl",
+      "name": "Ministral-3-8B-Reasoning",
+      "url": "https://huggingface.co/unsloth/Ministral-3-8B-Reasoning-2512-GGUF/resolve/main/Ministral-3-8B-Reasoning-2512-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3565260832,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 8B parameter reasoning model - high quality",
+      "isRecommended": true
+    },
+    {
+      "id": "ministral-3-14b-reasoning-q2_k_xl",
+      "name": "Ministral-3-14B-Reasoning",
+      "url": "https://huggingface.co/unsloth/Ministral-3-14B-Reasoning-2512-GGUF/resolve/main/Ministral-3-14B-Reasoning-2512-UD-Q2_K_XL.gguf",
+      "sizeBytes": 5527104704,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 14B parameter reasoning model"
+    },
+    {
+      "id": "ministral-3-14b-instruct-q2_k_xl",
+      "name": "Ministral-3-14B-Instruct",
+      "url": "https://huggingface.co/unsloth/Ministral-3-14B-Instruct-2512-GGUF/resolve/main/Ministral-3-14B-Instruct-2512-UD-Q2_K_XL.gguf",
+      "sizeBytes": 5527106240,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 14B parameter instruct model",
+      "isRecommended": true
+    },
+    {
+      "id": "ministral-3-8b-instruct-q2_k_xl",
+      "name": "Ministral-3-8B-Instruct",
+      "url": "https://huggingface.co/unsloth/Ministral-3-8B-Instruct-2512-GGUF/resolve/main/Ministral-3-8B-Instruct-2512-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3565262368,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 8B parameter instruct model"
+    },
+    {
+      "id": "ministral-3-3b-instruct-q4_k_xl",
+      "name": "Ministral-3-3B-Instruct",
+      "url": "https://huggingface.co/unsloth/Ministral-3-3B-Instruct-2512-GGUF/resolve/main/Ministral-3-3B-Instruct-2512-UD-Q4_K_XL.gguf",
+      "sizeBytes": 2191963424,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Ministral 3B parameter instruct model"
+    },
+    {
+      "id": "olmo-3-7b-think-q2_k_xl",
+      "name": "Olmo-3-7B-Think",
+      "url": "https://huggingface.co/unsloth/Olmo-3-7B-Think-GGUF/resolve/main/Olmo-3-7B-Think-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3033110336,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "OLMo 7B thinking-optimized model"
+    },
+    {
+      "id": "olmo-3-7b-instruct-q2_k_xl",
+      "name": "Olmo-3-7B-Instruct",
+      "url": "https://huggingface.co/unsloth/Olmo-3-7B-Instruct-GGUF/resolve/main/Olmo-3-7B-Instruct-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3033111424,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "OLMo 7B instruction-tuned model"
+    },
+    {
+      "id": "exaone-4.0-1.2b-q8_0",
+      "name": "EXAONE-4.0-1.2B",
+      "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF/resolve/main/EXAONE-4.0-1.2B-Q8_0.gguf",
+      "sizeBytes": 1363939616,
+      "quantization": "Q8_0",
+      "type": "TEXT",
+      "description": "EXAONE 4.0 1.2B - LG AI Research model with Q8 precision",
+      "maxContextSize": 32768
+    },
+    {
+      "id": "granite-4.0-1b-q4_k_xl",
+      "name": "Granite-4.0-1B",
+      "url": "https://huggingface.co/unsloth/granite-4.0-1b-GGUF/resolve/main/granite-4.0-1b-UD-Q4_K_XL.gguf",
+      "sizeBytes": 1042454624,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "IBM Granite 4.0 1B - compact and efficient"
+    },
+    {
+      "id": "granite-4.0-h-1b-q4_k_xl",
+      "name": "Granite-4.0-H-1B",
+      "url": "https://huggingface.co/unsloth/granite-4.0-h-1b-GGUF/resolve/main/granite-4.0-h-1b-UD-Q4_K_XL.gguf",
+      "sizeBytes": 911791680,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "IBM Granite 4.0 H-variant 1B"
+    },
+    {
+      "id": "qwen3.5-2b-q4_k_xl",
+      "name": "Qwen3.5-2B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 1339752704,
+      "mmprojSizeBytes": 671372992,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "Qwen3.5 2B - balanced vision-language model",
+      "isRecommended": true
+    },
+    {
+      "id": "qwen3.5-4b-q4_k_xl",
+      "name": "Qwen3.5-4B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 2912109728,
+      "mmprojSizeBytes": 675569344,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "Qwen3.5 4B - high quality vision-language model",
+      "isRecommended": true
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-4b-q4_k_xl",
+      "name": "NVIDIA-Nemotron-3-Nano-4B",
+      "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3-Nano-4B-GGUF/resolve/main/NVIDIA-Nemotron-3-Nano-4B-UD-Q4_K_XL.gguf",
+      "sizeBytes": 3133118624,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "NVIDIA Nemotron 3 Nano 4B - hybrid Mamba-2/Transformer reasoning model with 262K context",
+      "isRecommended": true,
+      "maxContextSize": 262144
+    },
+    {
+      "id": "llama-3.1-nemotron-nano-4b-v1.1-iq4_nl",
+      "name": "Llama-3.1-Nemotron-Nano-4B-v1.1",
+      "url": "https://huggingface.co/mradermacher/Llama-3.1-Nemotron-Nano-4B-v1.1-i1-GGUF/resolve/main/Llama-3.1-Nemotron-Nano-4B-v1.1.i1-IQ4_NL.gguf",
+      "sizeBytes": 2856100249,
+      "quantization": "IQ4_NL",
+      "type": "TEXT",
+      "description": "NVIDIA Nemotron Nano 4B v1.1 - compact reasoning model with Llama 3.1 base"
+    },
+    {
+      "id": "ai21-jamba-reasoning-3b-q4_k_m",
+      "name": "AI21-Jamba-Reasoning-3B",
+      "url": "https://huggingface.co/bartowski/ai21labs_AI21-Jamba-Reasoning-3B-GGUF/resolve/main/ai21labs_AI21-Jamba-Reasoning-3B-Q4_K_M.gguf",
+      "sizeBytes": 1932698592,
+      "quantization": "Q4_K_M",
+      "type": "TEXT",
+      "description": "AI21 Jamba 3B - hybrid Mamba-Transformer reasoning model"
+    },
+    {
+      "id": "ai21-jamba2-3b-q4_k_m",
+      "name": "AI21-Jamba2-3B",
+      "url": "https://huggingface.co/mradermacher/AI21-Jamba2-3B-i1-GGUF/resolve/main/AI21-Jamba2-3B.i1-Q4_K_M.gguf",
+      "sizeBytes": 1932698592,
+      "quantization": "Q4_K_M",
+      "type": "TEXT",
+      "description": "AI21 Jamba2 3B - hybrid Mamba-Transformer model"
+    },
+    {
+      "id": "phi-4-mini-reasoning-q4_k_xl",
+      "name": "Phi-4-Mini-Reasoning",
+      "url": "https://huggingface.co/unsloth/Phi-4-mini-reasoning-GGUF/resolve/main/Phi-4-mini-reasoning-UD-Q4_K_XL.gguf",
+      "sizeBytes": 2462678944,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "Microsoft Phi-4 Mini 3.8B - optimized for mathematical reasoning with 128K context"
+    },
+    {
+      "id": "apriel-1.5-15b-thinker-q2_k_xl",
+      "name": "Apriel-1.5-15B-Thinker",
+      "url": "https://huggingface.co/unsloth/Apriel-1.5-15b-Thinker-GGUF/resolve/main/Apriel-1.5-15b-Thinker-UD-Q2_K_XL.gguf",
+      "sizeBytes": 5858967136,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Apriel 1.5 15B Thinker - large reasoning model"
+    },
+    {
+      "id": "januscoder-14b-q2_k_xl",
+      "name": "JanusCoder-14B",
+      "url": "https://huggingface.co/unsloth/JanusCoder-14B-GGUF/resolve/main/JanusCoder-14B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 6067584192,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "JanusCoder 14B - coding-focused model"
+    },
+    {
+      "id": "januscoder-8b-q2_k_xl",
+      "name": "JanusCoder-8B",
+      "url": "https://huggingface.co/unsloth/JanusCoder-8B-GGUF/resolve/main/JanusCoder-8B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3501975200,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "JanusCoder 8B - coding-focused model"
+    },
+    {
+      "id": "ernie-4.5-21b-a3b-thinking-q2_k_xl",
+      "name": "ERNIE-4.5-21B-A3B-Thinking",
+      "url": "https://huggingface.co/unsloth/ERNIE-4.5-21B-A3B-Thinking-GGUF/resolve/main/ERNIE-4.5-21B-A3B-Thinking-UD-Q2_K_XL.gguf",
+      "sizeBytes": 8604675264,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "Baidu ERNIE 4.5 21B - thinking-optimized model"
+    },
+    {
+      "id": "glm-4.7-flash-reap-23b-a3b-tq1_0",
+      "name": "GLM-4.7-Flash-REAP-23B-A3B",
+      "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-REAP-23B-A3B-GGUF/resolve/main/GLM-4.7-Flash-REAP-23B-A3B-UD-TQ1_0.gguf",
+      "sizeBytes": 6536330976,
+      "quantization": "TQ1_0",
+      "type": "TEXT",
+      "description": "GLM 4.7 Flash 23B A3B - fast MoE model with REAP pruning",
+      "isRecommended": true
+    },
+    {
+      "id": "gpt-oss-20b-pruned-10b-iq4_nl",
+      "name": "GPT-OSS-20B-Pruned-10B",
+      "url": "https://huggingface.co/12bitmisfit/OpenAI_GPT-OSS-20B_Pruned_REAP_10B-GGUF/resolve/main/GPT-OSS-20B-Pruned-IQ4_NL.gguf",
+      "sizeBytes": 6787509280,
+      "quantization": "IQ4_NL",
+      "type": "TEXT",
+      "description": "OpenAI GPT-OSS 20B pruned to 10B - high quality compressed model"
+    },
+    {
+      "id": "nvidia-nemotron-nano-9b-v2-q4_k_m",
+      "name": "NVIDIA-Nemotron-Nano-9B-v2",
+      "url": "https://huggingface.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-9B-v2-GGUF/resolve/main/nvidia_NVIDIA-Nemotron-Nano-9B-v2-Q4_K_M.gguf",
+      "sizeBytes": 6525629280,
+      "quantization": "Q4_K_M",
+      "type": "TEXT",
+      "description": "NVIDIA Nemotron Nano 9B v2 - reasoning-enhanced model"
+    },
+    {
+      "id": "nvidia-nemotron-nano-12b-v2-q4_k_m",
+      "name": "NVIDIA-Nemotron-Nano-12B-v2",
+      "url": "https://huggingface.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-12B-v2-GGUF/resolve/main/nvidia_NVIDIA-Nemotron-Nano-12B-v2-Q4_K_M.gguf",
+      "sizeBytes": 7494497792,
+      "quantization": "Q4_K_M",
+      "type": "TEXT",
+      "description": "NVIDIA Nemotron Nano 12B v2 - high-quality reasoning model"
+    },
+    {
+      "id": "falcon-h1r-7b-q2_k_xl",
+      "name": "Falcon-H1R-7B",
+      "url": "https://huggingface.co/unsloth/Falcon-H1R-7B-GGUF/resolve/main/Falcon-H1R-7B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3275366400,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "TII Falcon H1R 7B - hybrid Transformer-Mamba reasoning model, excels at math and code"
+    },
+    {
+      "id": "qwen3.5-9b-q2_k_xl",
+      "name": "Qwen3.5-9B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/resolve/main/Qwen3.5-9B-UD-Q2_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 4121781472,
+      "mmprojSizeBytes": 921705024,
+      "quantization": "Q2_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "Qwen3.5 9B - large vision-language model",
+      "isRecommended": true
+    },
+    {
+      "id": "glm-4.6v-9b-flash-q2_k_xl",
+      "name": "GLM-4.6V-9B-Flash",
+      "url": "https://huggingface.co/unsloth/GLM-4.6V-Flash-GGUF/resolve/main/GLM-4.6V-Flash-UD-Q2_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/GLM-4.6V-Flash-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 4211066464,
+      "mmprojSizeBytes": 1840904320,
+      "quantization": "Q2_K_XL",
+      "type": "VISION_LANGUAGE",
+      "description": "GLM 4.6V Flash 9B - fast vision-language from Zhipu AI",
+      "isRecommended": true
+    },
+    {
+      "id": "lfm2.5-vl-1.6b-q8_0",
+      "name": "LFM2.5-VL-1.6B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/LFM2.5-VL-1.6B-Q8_0.gguf",
+      "mmprojUrl": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/mmproj-LFM2.5-VL-1.6b-BF16.gguf",
+      "sizeBytes": 1246254560,
+      "mmprojSizeBytes": 855763328,
+      "quantization": "Q8_0",
+      "type": "VISION_LANGUAGE",
+      "description": "LFM2.5 VL 1.6B - compact Liquid vision-language model",
+      "isRecommended": true
+    },
+    {
+      "id": "granite-embedding-small-english-r2-q8_0",
+      "name": "Granite Embedding (Tiny)",
+      "url": "https://huggingface.co/mradermacher/granite-embedding-small-english-r2-GGUF/resolve/main/granite-embedding-small-english-r2.Q8_0.gguf",
+      "sizeBytes": 52000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "IBM Granite 47M - 384-dim English embeddings, ultra-lightweight",
+      "embeddingDimension": 384,
+      "maxContextSize": 8192
+    },
+    {
+      "id": "nomic-embed-text-v1.5-q8_0",
+      "name": "Nomic Embed v1.5 (Small)",
+      "url": "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q8_0.gguf",
+      "sizeBytes": 146000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "Nomic AI 137M - 768-dim embeddings, excellent quality for size",
+      "embeddingDimension": 768,
+      "maxContextSize": 2048,
+      "isRecommended": true,
+      "queryPrefix": "search_query: ",
+      "documentPrefix": "search_document: "
+    },
+    {
+      "id": "granite-embedding-english-r2-q8_0",
+      "name": "Granite Embedding (Compact)",
+      "url": "https://huggingface.co/mradermacher/granite-embedding-english-r2-GGUF/resolve/main/granite-embedding-english-r2.Q8_0.gguf",
+      "sizeBytes": 160000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "IBM Granite 278M - 768-dim English embeddings, 8K context window",
+      "embeddingDimension": 768,
+      "maxContextSize": 8192
+    },
+    {
+      "id": "embeddinggemma-300m-q8_0",
+      "name": "EmbeddingGemma (Medium)",
+      "url": "https://huggingface.co/ggml-org/embeddinggemma-300m-qat-q8_0-GGUF/resolve/main/embeddinggemma-300m-qat-Q8_0.gguf",
+      "sizeBytes": 302863104,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "Google Gemma-based 300M QAT - 768-dim embeddings, high quality retrieval",
+      "embeddingDimension": 768,
+      "maxContextSize": 2048
+    },
+    {
+      "id": "nomic-embed-text-v2-moe-q8_0",
+      "name": "Nomic Embed v2 MoE (Large)",
+      "url": "https://huggingface.co/nomic-ai/nomic-embed-text-v2-moe-GGUF/resolve/main/nomic-embed-text-v2-moe.Q8_0.gguf",
+      "sizeBytes": 512000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "Nomic AI 475M MoE - 768-dim multilingual embeddings, state-of-the-art quality",
+      "embeddingDimension": 768,
+      "maxContextSize": 2048,
+      "queryPrefix": "search_query: ",
+      "documentPrefix": "search_document: "
+    },
+    {
+      "id": "qwen3-embedding-0.6b-q8_0",
+      "name": "Qwen3 Embedding (Premium)",
+      "url": "https://huggingface.co/PeterAM4/Qwen3-Embedding-0.6B-GGUF/resolve/main/Qwen3-Embedding-0.6B-Q8_0.gguf",
+      "sizeBytes": 639150144,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "Qwen3 0.6B - 1024-dim multilingual embeddings, highest quality",
+      "embeddingDimension": 1024,
+      "maxContextSize": 32768,
+      "queryPrefix": "Instruct: Retrieve relevant passages.\nQuery: "
+    },
+    {
+      "id": "smolvlm2-256m-vision-helper",
+      "name": "SmolVLM2-256M (Faster)",
+      "url": "https://huggingface.co/mradermacher/SmolVLM2-256M-Video-Instruct-i1-GGUF/resolve/main/SmolVLM2-256M-Video-Instruct.i1-Q6_K.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-256M-Video-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-256M-Video-Instruct-f16.gguf",
+      "sizeBytes": 143998608,
+      "mmprojSizeBytes": 195706016,
+      "quantization": "i1-Q6_K",
+      "type": "VISION_HELPER",
+      "description": "Ultra-tiny VLM for fast image descriptions. Smaller and faster but less detailed",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "smolvlm2-500m-vision-helper",
+      "name": "SmolVLM2-500M (Better)",
+      "url": "https://huggingface.co/mradermacher/SmolVLM2-500M-Video-Instruct-i1-GGUF/resolve/main/SmolVLM2-500M-Video-Instruct.i1-Q6_K.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-500M-Video-Instruct-f16.gguf",
+      "sizeBytes": 417763040,
+      "mmprojSizeBytes": 199470624,
+      "quantization": "i1-Q6_K",
+      "type": "VISION_HELPER",
+      "description": "Small VLM for detailed image descriptions. Better quality but slower",
+      "maxContextSize": 8192,
+      "isRecommended": true
+    },
+    {
+      "id": "smolvlm2-2.2b-vision-helper",
+      "name": "SmolVLM2-2.2B (Quality)",
+      "url": "https://huggingface.co/ggml-org/SmolVLM2-2.2B-Instruct-GGUF/resolve/main/SmolVLM2-2.2B-Instruct-Q4_K_M.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-2.2B-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-2.2B-Instruct-f16.gguf",
+      "sizeBytes": 1112602656,
+      "mmprojSizeBytes": 872303680,
+      "quantization": "Q4_K_M",
+      "type": "VISION_HELPER",
+      "description": "Larger SmolVLM2 with excellent image understanding capabilities",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "lfm2.5-vl-1.6b-vision-helper",
+      "name": "LFM2.5-VL-1.6B (Best)",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/LFM2.5-VL-1.6B-Q8_0.gguf",
+      "mmprojUrl": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/mmproj-LFM2.5-VL-1.6b-BF16.gguf",
+      "sizeBytes": 1246254560,
+      "mmprojSizeBytes": 855763328,
+      "quantization": "Q8_0",
+      "type": "VISION_HELPER",
+      "description": "Liquid AI 1.6B - highest quality image descriptions with efficient architecture",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "qwen3.5-2b-vision-helper",
+      "name": "Qwen3.5-2B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 1339752704,
+      "mmprojSizeBytes": 671372992,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_HELPER",
+      "description": "Qwen3.5 2B - fast and efficient vision descriptions",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "qwen3.5-0.8b-vision-helper",
+      "name": "Qwen3.5-0.8B",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/main/Qwen3.5-0.8B-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 558772480,
+      "mmprojSizeBytes": 207346528,
+      "quantization": "Q4_K_XL",
+      "type": "VISION_HELPER",
+      "description": "Qwen3.5 0.8B - ultra compact vision descriptions",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "nexus-tinyfunction-1.2b-v2.0-imatrix-q6_k",
+      "name": "Nexus TinyFunction 1.2B",
+      "url": "https://huggingface.co/nexus-syntegra/Nexus-TinyFunction-1.2B-v2.0-IMatrix-GGUF/resolve/main/Nexus-TinyFunction-1.2B-v2.0-IMatrix-Q6_K.gguf",
+      "sizeBytes": 960000000,
+      "quantization": "IMatrix-Q6_K",
+      "type": "FUNCTION_CALLING",
+      "description": "Nexus TinyFunction 1.2B - custom fine-tuned function calling for Nexus Chat",
+      "maxContextSize": 32768,
+      "isRecommended": true
+    }
+  ]
+}
