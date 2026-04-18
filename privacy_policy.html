@@ -31,7 +31,7 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective Date: March 28, 2026</p>
+    <p class="effective">Effective Date: April 17, 2026</p>
 
     <p>Nexus Chat ("the App") is developed by Nexus Syntegra. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</p>
 
@@ -65,6 +65,7 @@
         <li><strong>Firebase Crashlytics:</strong> When enabled (default: on), anonymized crash reports are sent to Google Firebase. These include app version, device model, OS version, and crash stack traces. No conversation content is included. You can disable this in Settings &gt; Security &gt; Crash Reports &amp; Analytics.</li>
         <li><strong>Firebase Analytics:</strong> When enabled (default: on), anonymized usage patterns (e.g., feature usage frequency, session duration) are sent to Google Firebase. No conversation content or personal data is included. You can disable this in Settings &gt; Security &gt; Crash Reports &amp; Analytics.</li>
         <li><strong>HuggingFace:</strong> Model files are downloaded from HuggingFace repositories. Only the model download request (URL and file metadata) is sent; no user data or conversation content is transmitted.</li>
+        <li><strong>Inference Engine Updates:</strong> The on-device inference engine (llama.cpp) ships inside the installed APK by default, and in the default state no requests are made for engine updates. If you opt into an updatable engine channel in Settings &gt; System &gt; Inference Engine Version, the App additionally (a) fetches a manifest of available builds from <code>raw.githubusercontent.com/nexus-syntegra/nexus-chat-resources</code> (cached for up to one hour), and (b) downloads the specific build you select from <code>github.com/nexus-syntegra/nexus-chat-resources/releases</code>. All requests are over HTTPS and include only standard HTTP metadata (IP address, user agent) that GitHub logs for any public request; no account identifier, device identifier, or tracking token is added, and no telemetry about which version you picked is sent to any server we control. Every downloaded build is verified against a SHA-256 hash published in the signed manifest before it is loaded. You can revert to the built-in engine at any time via Settings &gt; System &gt; Inference Engine Version &gt; Revert to pinned.</li>
         <li><strong>Google Play Integrity:</strong> The App uses the Google Play Integrity API to verify device and app integrity. Device integrity signals are sent to Google as part of this verification. No user data or conversation content is included.</li>
         <li><strong>ML Kit:</strong> The App uses Google ML Kit for on-device translation and language identification. ML Kit may download language models from Google servers. Translation is performed on-device; text is not sent to Google.</li>
         <li><strong>Google Play Billing:</strong> If you make in-app purchases, purchase transactions are processed by Google Play. The App receives purchase status but does not process payment information directly.</li>
@@ -163,6 +164,7 @@
         <li><strong>Google (Drive, Calendar, Tasks, Contacts, Gmail, Home, Play Services):</strong> <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
         <li><strong>Firebase (Crashlytics &amp; Analytics):</strong> <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></li>
         <li><strong>HuggingFace:</strong> <a href="https://huggingface.co/privacy">HuggingFace Privacy Policy</a></li>
+        <li><strong>GitHub (inference engine updates &amp; model catalog):</strong> <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
         <li><strong>Home Assistant:</strong> Self-hosted; privacy governed by your Home Assistant instance configuration.</li>
         <li><strong>IFTTT:</strong> <a href="https://ifttt.com/privacy">IFTTT Privacy Policy</a></li>
     </ul>
