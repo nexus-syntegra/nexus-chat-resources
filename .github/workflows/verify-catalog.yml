@@ -1,0 +1,25 @@
+name: Verify Model Catalog
+
+# Catches a models.json that bypassed the pre-commit hook: the app rejects anything but a
+# production-signed container and falls back to its bundled catalog.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify models.json
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Verify catalog container
+        run: .github/scripts/verify-catalog.sh models.json

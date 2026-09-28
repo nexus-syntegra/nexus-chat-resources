@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Blocks a commit whose staged models.json is not a production-signed NXMC container.
+# Enable once per clone: git config core.hooksPath .githooks
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+status="$(git diff --cached --name-status --no-renames -- models.json)"
+[[ -n $status ]] || exit 0
+
+if [[ $status == D* ]]; then
+    echo "pre-commit: refusing to delete models.json; the app fetches it from main." >&2
+    exit 1
+fi
+
+staged="$(mktemp)"
+trap 'rm -f "$staged"' EXIT
+git show :models.json >"$staged"
+
+if ! "$repo_root/.github/scripts/verify-catalog.sh" "$staged"; then
+    cat >&2 <<'EOF'
+pre-commit: models.json must be the encrypted, signed catalog. Edit models.json in
+nexus-chat-android and push to main: its "Publish Model Catalog" workflow encrypts it
+and commits the container here.
+EOF
+    exit 1
+fi
