@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Your Data - Nexus Chat</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+            background-color: #fff;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #1a1a1a; color: #e0e0e0; }
+            a { color: #6bb3ff; }
+        }
+        h1 { font-size: 24px; margin-bottom: 8px; }
+        h2 { font-size: 18px; margin-top: 24px; color: #555; }
+        @media (prefers-color-scheme: dark) { h2 { color: #aaa; } }
+        p { margin: 12px 0; }
+        ol, ul { padding-left: 20px; }
+        li { margin: 8px 0; }
+        table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+        th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid #ddd; }
+        @media (prefers-color-scheme: dark) { th, td { border-bottom-color: #444; } }
+        .table-wrap { overflow-x: auto; }
+        .effective { font-size: 14px; color: #666; }
+        @media (prefers-color-scheme: dark) { .effective { color: #888; } }
+    </style>
+</head>
+<body>
+    <h1>Delete Your Nexus Chat Data</h1>
+    <p class="effective">Nexus Chat by Nexus Syntegra. Updated October 7, 2026.</p>
+
+    <p>Nexus Chat has no user accounts, so there is no account to close. Your conversations, memories, documents and settings live on your phone, and you can erase them yourself at any time. A small amount of data is held off the phone; this page explains how to have that deleted too.</p>
+
+    <h2>Delete everything on your phone</h2>
+    <ol>
+        <li>Open Nexus Chat.</li>
+        <li>Go to <strong>Settings &gt; Security &gt; Delete All Data</strong>.</li>
+        <li>Confirm. The App erases its data, and its next launch starts as a first run.</li>
+    </ol>
+    <p>This erases conversations, memories, imported documents, voice clones, the app suite (calendar, tasks, notes, alarms, timers, money, habits, journal and sleep), automations, settings, saved API keys and credentials, and the in-app browser's cookies and storage. It signs out of Google and Tailscale. Deletion is immediate and cannot be undone.</p>
+    <p>Downloaded AI models are kept, because they hold none of your data and are large to download again. Remove them from the Models screen, or uninstall the App.</p>
+    <p>Uninstalling Nexus Chat also removes everything it stored on the phone.</p>
+    <p><strong>Backups</strong> you made are yours and are not touched by the steps above. Delete them where you saved them: in Google Drive, open <strong>Settings &gt; Manage apps</strong> in Drive on the web, find Nexus Chat and choose <strong>Delete hidden app data</strong>; for a folder backup, delete the <code>.nxv</code> files from that folder.</p>
+
+    <h2>Request deletion of data held off your phone</h2>
+    <p>Email <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a> with the subject <strong>Delete my Nexus Chat data</strong>. Tell us which of the items below you want deleted. Because none of this data is tied to an account, include anything that helps us find it: for a report, the approximate date and time you sent it and the text of the reply you reported. We reply within 30 days.</p>
+
+    <h2>What is held off your phone, and for how long</h2>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Data</th><th>Who holds it</th><th>Kept for</th><th>On request</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reports you sent about an AI reply (reply text, reason, comment, model, App version, and your prompt only if you chose to include it)</td>
+                <td>Nexus Syntegra, in Google Cloud Firestore</td>
+                <td>Deleted automatically 180 days after receipt</td>
+                <td>Deleted earlier if we can identify it from the details you give</td>
+            </tr>
+            <tr>
+                <td>Request logs from our Cloud Functions (IP address and time of each call)</td>
+                <td>Nexus Syntegra, in Google Cloud Logging</td>
+                <td>Deleted automatically after 30 days</td>
+                <td>Expire on the same schedule</td>
+            </tr>
+            <tr>
+                <td>Crash reports, only if you turned on crash reports</td>
+                <td>Google Firebase Crashlytics</td>
+                <td>90 days</td>
+                <td>Turn crash reports off in Settings &gt; Security &gt; Crash Reports &amp; Analytics to stop collection; existing reports expire on schedule</td>
+            </tr>
+            <tr>
+                <td>Usage analytics, only if you turned on analytics</td>
+                <td>Google Firebase Analytics</td>
+                <td>Up to 14 months</td>
+                <td>Turn analytics off to stop collection; we delete what Google's tools let us identify as yours</td>
+            </tr>
+            <tr>
+                <td>Security diagnostics (device integrity, anonymous device identifier, IP-derived approximate location)</td>
+                <td>Talsec, the provider of the App's security library</td>
+                <td>Under Talsec's retention policy</td>
+                <td>We forward your request to Talsec</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p>Data you sent to services you connected yourself (a search provider, a remote AI backend, Google services, smart-home services, Tailscale) is held by those services under their own policies. Delete it with them.</p>
+
+    <p>Full details are in the <a href="https://nexus-syntegra.github.io/nexus-chat-resources/privacy_policy.html">Nexus Chat Privacy Policy</a>.</p>
+</body>
+</html>

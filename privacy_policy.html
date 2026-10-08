@@ -31,142 +31,179 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective Date: April 17, 2026</p>
+    <p class="effective">Effective Date: October 7, 2026</p>
 
-    <p>Nexus Chat ("the App") is developed by Nexus Syntegra. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</p>
+    <p>Nexus Chat ("the App") is developed by Nexus Syntegra ("we", "us"). This Privacy Policy explains what information the App handles, what leaves your device, who receives it, and how to have it deleted. It covers the phone app and its Wear OS companion.</p>
 
     <h2>1. Information We Collect</h2>
 
-    <h3>1.1 Local Data (Stored on Your Device Only)</h3>
-    <p>The following data is stored and processed exclusively on your device and is never transmitted to any server:</p>
+    <h3>1.1 Data That Stays on Your Device</h3>
+    <p>The following is stored and processed on your device. It is not sent to us:</p>
     <ul>
-        <li><strong>Conversations:</strong> All chat messages and conversation history are stored locally in an encrypted database. This data never leaves your device unless you explicitly use the backup feature.</li>
-        <li><strong>Settings &amp; Preferences:</strong> Your app configuration and preferences.</li>
-        <li><strong>AI Models:</strong> Downloaded language models stored locally for on-device inference.</li>
-        <li><strong>Voice Data:</strong> Voice input is processed on-device using local speech recognition. Audio is never transmitted to external servers.</li>
-        <li><strong>Camera &amp; Photos:</strong> Images used with vision model features are processed entirely on-device. Images are never transmitted to external servers unless you are using a remote AI backend that you have configured.</li>
-        <li><strong>Biometric Data:</strong> If you enable app lock, biometric authentication is handled entirely by the Android system. The App never accesses or stores biometric data.</li>
-        <li><strong>Long-Term Memory:</strong> The Nexus Memory feature extracts and stores facts from conversations locally in an encrypted database for personalization. This data never leaves your device.</li>
-        <li><strong>Documents:</strong> Documents ingested for RAG (PDF, DOCX, XLSX, text) are processed and indexed locally. Document content is never transmitted externally.</li>
+        <li><strong>Conversations:</strong> Chat messages and conversation history, stored in an encrypted database. They leave the device only when you use a feature that sends them somewhere you chose: a remote AI backend, a backup to your own Google Drive or folder, an export, or a report you send about a reply (section 1.3).</li>
+        <li><strong>Settings and preferences:</strong> Your app configuration.</li>
+        <li><strong>AI models:</strong> Downloaded language models, used for on-device inference.</li>
+        <li><strong>Voice:</strong> By default, speech is recognized on the device. Two exceptions: on Android 10 and 11 the App uses the system speech recognizer, which can send audio to your device's speech service (usually Google) because those Android versions offer no on-device-only option; and if you choose a remote speech engine, your recording is sent to the endpoint you configured.</li>
+        <li><strong>Camera and photos:</strong> Images used with vision features are processed on the device, unless you use a remote AI backend you configured, which then receives them.</li>
+        <li><strong>Biometric data:</strong> App lock uses the Android system's biometric prompt. The App never receives or stores biometric data.</li>
+        <li><strong>Long-term memory:</strong> Nexus Memory stores facts from conversations in the encrypted database for personalization.</li>
+        <li><strong>Documents:</strong> Documents you import (PDF, Word, Excel, text and others) are processed and indexed on the device.</li>
+        <li><strong>Content safety:</strong> The safety guard (Qwen3Guard-Stream) and the prompt-injection screen (Llama Prompt Guard 2) run on the device. Neither sends your text anywhere.</li>
     </ul>
 
-    <h3>1.2 Data Transmitted to Third Parties</h3>
-    <p>The following data may be transmitted when you enable specific optional features:</p>
+    <h3>1.2 Data Sent Automatically</h3>
+    <p>These happen without any setting being switched on. None of them includes your conversations, prompts, documents, memories or voice.</p>
     <ul>
-        <li><strong>Web Search Queries:</strong> When you enable web search, your search queries are sent to the search provider you configure (Brave Search, Tavily, SerpAPI, or Serpstack). Only the search query and optional coarse location are sent, not your conversation history.</li>
-        <li><strong>Google Drive Backup:</strong> When you enable cloud backup, your conversations are encrypted with XChaCha20-Poly1305 before upload and stored in your personal Google Drive appDataFolder (hidden from your main Drive).</li>
-        <li><strong>Google Calendar:</strong> When you enable Calendar integration, the App accesses your Google Calendar events via the Google Calendar API to provide scheduling assistance. Access is read/write as you direct.</li>
-        <li><strong>Google Tasks:</strong> When you enable Tasks integration, the App accesses your Google Tasks via the Google Tasks API. Access is read/write as you direct.</li>
-        <li><strong>Google Contacts:</strong> When you enable Contacts integration, the App accesses your contacts via the Google People API for contact lookup. Access is read-only.</li>
-        <li><strong>Google Gmail:</strong> When you enable Gmail integration, the App accesses your Gmail via the Gmail API as you direct. The App does not read or scan emails without your explicit request.</li>
-        <li><strong>Smart Home:</strong> When you configure smart home integration (Google Home, Home Assistant, or IFTTT), device commands are sent to the respective service. The App does not store smart home device data beyond the current session.</li>
-        <li><strong>Remote AI Backend:</strong> If you configure a remote AI backend or LM Studio connection, your messages are sent to that server. This is user-configured and the App does not control these servers.</li>
-        <li><strong>Remote MCP Servers:</strong> If you configure remote Model Context Protocol (MCP) servers, tool calls and their results are exchanged with those servers. This is user-configured.</li>
-        <li><strong>Firebase Crashlytics:</strong> When enabled (default: on), anonymized crash reports are sent to Google Firebase. These include app version, device model, OS version, and crash stack traces. No conversation content is included. You can disable this in Settings &gt; Security &gt; Crash Reports &amp; Analytics.</li>
-        <li><strong>Firebase Analytics:</strong> When enabled (default: on), anonymized usage patterns (e.g., feature usage frequency, session duration) are sent to Google Firebase. No conversation content or personal data is included. You can disable this in Settings &gt; Security &gt; Crash Reports &amp; Analytics.</li>
-        <li><strong>HuggingFace:</strong> Model files are downloaded from HuggingFace repositories. Only the model download request (URL and file metadata) is sent; no user data or conversation content is transmitted.</li>
-        <li><strong>Inference Engine Updates:</strong> The on-device inference engine (llama.cpp) ships inside the installed APK by default, and in the default state no requests are made for engine updates. If you opt into an updatable engine channel in Settings &gt; System &gt; Inference Engine Version, the App additionally (a) fetches a manifest of available builds from <code>raw.githubusercontent.com/nexus-syntegra/nexus-chat-resources</code> (cached for up to one hour), and (b) downloads the specific build you select from <code>github.com/nexus-syntegra/nexus-chat-resources/releases</code>. All requests are over HTTPS and include only standard HTTP metadata (IP address, user agent) that GitHub logs for any public request; no account identifier, device identifier, or tracking token is added, and no telemetry about which version you picked is sent to any server we control. Every downloaded build is verified against a SHA-256 hash published in the signed manifest before it is loaded. You can revert to the built-in engine at any time via Settings &gt; System &gt; Inference Engine Version &gt; Revert to pinned.</li>
-        <li><strong>Google Play Integrity:</strong> The App uses the Google Play Integrity API to verify device and app integrity. Device integrity signals are sent to Google as part of this verification. No user data or conversation content is included.</li>
-        <li><strong>ML Kit:</strong> The App uses Google ML Kit for on-device translation and language identification. ML Kit may download language models from Google servers. Translation is performed on-device; text is not sent to Google.</li>
-        <li><strong>Google Play Billing:</strong> If you make in-app purchases, purchase transactions are processed by Google Play. The App receives purchase status but does not process payment information directly.</li>
+        <li><strong>Security diagnostics (Talsec freeRASP):</strong> The App includes freeRASP, a security library from Talsec. It sends Talsec anonymous diagnostics about the integrity of the App and the operating system (for example, whether the device is rooted, running an emulator or a hooking framework), the device model, an anonymous app-instance identifier and device identifier, and the IP address of the request, from which Talsec resolves an approximate location (country, region, city) and network operator. This is used for fraud prevention, security and compliance. It cannot be switched off in the App. Talsec stores this data in the United States.</li>
+        <li><strong>App integrity (Google Play Integrity and Firebase App Check):</strong> When the App starts, it asks Google Play for an integrity verdict and sends the resulting token to our Cloud Function, which asks Google to decode it. The decoded verdict (device and app integrity labels, licensing status, Play Protect status) is kept in the App's memory for up to six hours and is not stored by us. Firebase App Check attests the App to Google before our Cloud Functions accept a request.</li>
+        <li><strong>Model catalog:</strong> The App downloads the list of available models from GitHub at startup.</li>
+        <li><strong>Safety models:</strong> Google Play delivers the content-safety models to the App after installation.</li>
+    </ul>
+    <p>Like any server, the services above see the IP address your request comes from. Google Cloud's request logs for our Cloud Functions record the IP address and time of each call; those logs are kept for 30 days and are used only to operate and secure the service.</p>
+
+    <h3>1.3 Reports About AI Replies</h3>
+    <p>When you report an AI reply and tap <strong>Send report</strong>, the App sends us: the reply text (up to 4,000 characters), the reason you chose, your optional comment (up to 1,000 characters), which model produced it, where in the App it happened (chat, assistant or watch), the App version and the time. Your prompt is included only if you tick the box to include it (up to 2,000 characters); it is off by default, and reports from the watch never include it.</p>
+    <p>A report carries no account, device identifier or advertising identifier, and we do not store your IP address with it. Reports are stored in Google Cloud Firestore and deleted automatically 180 days after we receive them. We use them to find and fix harmful or wrong output and to meet our legal obligations for AI content. A report waits on your device until it is delivered; nothing is sent until you tap Send report.</p>
+
+    <h3>1.4 Data Sent When You Turn On a Feature</h3>
+    <ul>
+        <li><strong>Web search:</strong> Your search queries go to the search provider you choose (DuckDuckGo by default, or Brave Search, Tavily, SerpAPI or Serpstack), and the App then fetches the result pages. Only the query and, if enabled, location context are sent; your conversation history is not.</li>
+        <li><strong>Google Drive backup:</strong> Backups are encrypted on the device before upload and stored in your own Google Drive app-data folder, hidden from your main Drive.</li>
+        <li><strong>Google Calendar, Tasks, Contacts and Gmail:</strong> When you connect one, the App reads and writes that service through Google's APIs as you direct. Contacts are read-only. Gmail is not read without your request.</li>
+        <li><strong>Smart home:</strong> When you connect Google Home, Home Assistant or IFTTT, device commands are sent to that service.</li>
+        <li><strong>Remote AI backend:</strong> If you configure one, your messages, the context the App adds to them (section 8), and any images you attach are sent to that server.</li>
+        <li><strong>Remote MCP servers:</strong> If you configure one, tool calls and their results are exchanged with it.</li>
+        <li><strong>Tailscale:</strong> If you sign in to Tailscale, the App joins your tailnet and exchanges network traffic with your tailnet's coordination server and peers.</li>
+        <li><strong>Firebase Crashlytics:</strong> <strong>Off by default.</strong> If you turn it on, crash reports go to Google Firebase: stack traces, App version, build type, device model, Android version, CPU type and memory size. No conversation content is included.</li>
+        <li><strong>Firebase Analytics:</strong> <strong>Off by default.</strong> If you turn it on, usage events go to Google Firebase: setup milestones, which features are used, start-up time, model-load time and generation speed, together with device model, Android version, CPU type and memory size. No conversation content is included. No user ID is set.</li>
+        <li><strong>Hugging Face:</strong> Models you search for or download come from Hugging Face. Only the request for the file is sent.</li>
+        <li><strong>ML Kit:</strong> The translation tool downloads language models from Google. Translation itself runs on the device.</li>
     </ul>
 
-    <h3>1.3 Data We Do NOT Collect</h3>
+    <h3>1.5 Data We Do Not Collect</h3>
     <ul>
-        <li>We do not collect advertising identifiers (we explicitly opt out of the advertising ID)</li>
-        <li>We do not collect precise (GPS) location data</li>
-        <li>We do not collect or transmit conversation content to our servers</li>
-        <li>We do not sell, trade, or share any user data with data brokers or advertisers</li>
+        <li>No advertising identifier. The App removes the advertising ID permission.</li>
+        <li>No precise (GPS) location. The App requests approximate location only.</li>
+        <li>No conversation content reaches us, except a reply you choose to report.</li>
+        <li>No user accounts. You cannot create an account with us.</li>
+        <li>We do not sell, rent or trade any data, and we do not share data with advertisers or data brokers.</li>
     </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the information solely to provide the App's functionality:</p>
+    <h2>2. How We Use Information</h2>
     <ul>
-        <li>To enable AI chat conversations using local models</li>
-        <li>To save and restore your conversation history</li>
-        <li>To provide web search results when requested</li>
-        <li>To enable cloud backup when you choose to use it</li>
-        <li>To provide personal assistant features (Calendar, Tasks, Contacts, Gmail, Smart Home) when you enable them</li>
-        <li>To identify and fix crashes and improve app stability (via Firebase Crashlytics, when enabled)</li>
-        <li>To understand anonymized usage patterns and improve the app experience (via Firebase Analytics, when enabled)</li>
-        <li>To verify device and app integrity for security purposes</li>
+        <li>To run AI chat and the App's tools, on the device or on a backend you configured</li>
+        <li>To save, back up and restore your data when you ask</li>
+        <li>To run web searches and the integrations you connect</li>
+        <li>To detect tampering, fraud and abuse, and to warn you when the device or the App looks compromised</li>
+        <li>To review reported AI replies and improve the App's safety</li>
+        <li>To fix crashes and improve performance, only if you turned on crash reports or analytics</li>
     </ul>
 
     <h2>3. Data Security</h2>
     <ul>
-        <li>All AI inference happens on-device using local models</li>
-        <li>Sensitive data (API keys, credentials) is stored using Android's EncryptedSharedPreferences with AES-256-GCM encryption, backed by hardware-secured Android Keystore</li>
-        <li>Conversation data is stored in a locally encrypted SQLCipher database using AES-256 encryption with hardware-backed key management via Android Keystore</li>
-        <li>Google Drive backups are encrypted with XChaCha20-Poly1305 before upload and stored in a private appDataFolder</li>
-        <li>All network connections to third-party APIs use HTTPS with certificate pinning</li>
-        <li>The App employs runtime application self-protection (RASP) to detect tampering, rooting, hooking frameworks, and other security threats</li>
-        <li>Remote features are automatically disabled if device integrity is compromised</li>
+        <li>On-device inference: your conversations are processed on the device unless you choose a remote backend.</li>
+        <li>Credentials such as API keys are stored with AES-256-GCM using keys held in the Android Keystore.</li>
+        <li>The conversation database is encrypted with SQLCipher (AES-256), with its key protected by the Android Keystore.</li>
+        <li>Backups are encrypted on the device before they leave it, with AES-256-GCM. The key that encrypts each backup is itself protected by XChaCha20-Poly1305 under a key derived from your device, your backup password (PBKDF2, 600,000 iterations) or a recovery key kept in your own Google Drive.</li>
+        <li>Connections to our services and to Google use HTTPS. The certificates of the Brave Search, Tavily, SerpAPI and Serpstack APIs are pinned. The App sends plain HTTP only to servers on your local network or tailnet that you configure, such as a self-hosted model server, and refuses plain HTTP to public internet hosts.</li>
+        <li>Runtime protection detects tampering, rooting and hooking frameworks. A detection shows a warning you can dismiss; chat, models and downloads keep working.</li>
     </ul>
 
     <h2>4. Data Sharing</h2>
-    <p>We do not sell, trade, or rent your personal information. Data is only shared when:</p>
+    <p>We do not sell personal data. Data reaches third parties only in these cases:</p>
     <ul>
-        <li>You explicitly enable web search (queries sent to your chosen provider)</li>
-        <li>You explicitly enable cloud backup (encrypted data sent to your Google Drive)</li>
-        <li>You explicitly enable Google service integrations (data exchanged with Google APIs)</li>
-        <li>You explicitly enable smart home integrations (commands sent to your configured service)</li>
-        <li>You configure a remote AI backend or MCP servers (data sent to your specified servers)</li>
-        <li>Crash reports and analytics are enabled (anonymized data sent to Firebase)</li>
+        <li><strong>Talsec</strong> receives the security diagnostics in section 1.2 for fraud prevention and security. This happens on every install.</li>
+        <li><strong>Google</strong> processes Play Integrity, App Check, our Cloud Functions and Firestore (as our service provider), Play's delivery of the App and its safety models, and Crashlytics and Analytics if you turn them on.</li>
+        <li><strong>Services you choose</strong> receive what you send them: your search provider, remote AI backend, remote MCP servers, Google services you connect, smart-home services and Tailscale.</li>
     </ul>
 
     <h2>5. Data Retention</h2>
     <ul>
-        <li><strong>Conversations &amp; Local Data:</strong> Stored on your device until you delete them or uninstall the App.</li>
-        <li><strong>Google Drive Backups:</strong> Stored in your Google Drive until you delete them. The App does not automatically delete backups.</li>
-        <li><strong>Crash Reports:</strong> Firebase Crashlytics retains crash data for 90 days.</li>
-        <li><strong>Analytics:</strong> Firebase Analytics retains data per Google's standard retention policy (up to 14 months for aggregated data).</li>
-        <li><strong>Search Queries:</strong> Not retained by the App after the search session. Retention by the search provider is governed by their privacy policy.</li>
+        <li><strong>On your device:</strong> until you delete it, use Delete All Data or uninstall the App.</li>
+        <li><strong>Backups:</strong> in your Google Drive or folder until you delete them. Automatic backups keep the number of copies you set.</li>
+        <li><strong>Reports about AI replies:</strong> deleted automatically 180 days after receipt.</li>
+        <li><strong>Cloud Function request logs:</strong> 30 days.</li>
+        <li><strong>Crash reports (Crashlytics):</strong> 90 days.</li>
+        <li><strong>Analytics:</strong> up to 14 months, under Google's retention settings.</li>
+        <li><strong>Security diagnostics (Talsec):</strong> under Talsec's retention policy.</li>
+        <li><strong>Search queries:</strong> not kept by the App after the search. Your provider's own policy governs what it keeps.</li>
     </ul>
 
     <h2>6. Your Rights and Choices</h2>
     <ul>
-        <li><strong>Delete Data:</strong> You can delete all app data from Settings &gt; Security &gt; Delete All Data, by clearing the app's storage in Android Settings, or by uninstalling the App.</li>
-        <li><strong>Disable Features:</strong> Web search, cloud backup, remote backends, Google integrations, smart home, and crash reporting/analytics are all optional and can be disabled in Settings.</li>
-        <li><strong>Disable Analytics:</strong> You can opt out of crash reports and analytics in Settings &gt; Security &gt; Crash Reports &amp; Analytics.</li>
-        <li><strong>Export Data:</strong> You can export your conversations from the App.</li>
-        <li><strong>Revoke Permissions:</strong> You can revoke any app permissions (camera, microphone, location, storage) at any time in Android Settings.</li>
-        <li><strong>Revoke Google Access:</strong> You can revoke the App's access to Google services at any time via your Google Account security settings.</li>
-        <li><strong>Right to Access:</strong> All your data is stored locally on your device and is directly accessible to you.</li>
-        <li><strong>Right to Erasure:</strong> You can delete all data at any time as described above.</li>
+        <li><strong>Delete your data:</strong> see section 7.</li>
+        <li><strong>Turn features off:</strong> web search, location context, backups, remote backends, Google integrations, smart home, Tailscale, crash reports and analytics are all optional and can be switched off in Settings.</li>
+        <li><strong>Crash reports and analytics:</strong> Settings &gt; Security &gt; Crash Reports &amp; Analytics. Withdrawing consent stops collection from that moment.</li>
+        <li><strong>Export:</strong> you can export conversations, or make an encrypted backup of everything the App holds.</li>
+        <li><strong>Permissions:</strong> you can revoke camera, microphone, location, notification and other permissions at any time in Android Settings.</li>
+        <li><strong>Google access:</strong> you can revoke the App's access in your Google Account security settings.</li>
     </ul>
 
-    <h2>7. Children's Privacy</h2>
-    <p>The App is not intended for users under 13 years of age. We do not knowingly collect information from children under 13.</p>
+    <h2>7. Deleting Your Data</h2>
+    <p>Nexus Chat has no user accounts, so there is no account to delete. Almost everything the App holds is on your device, and you can erase it yourself:</p>
+    <ul>
+        <li><strong>Settings &gt; Security &gt; Delete All Data</strong> erases conversations, memories, documents, the app suite (calendar, tasks, notes, alarms and the rest), automations, settings and saved credentials, and signs out of Google and Tailscale. Downloaded models, which hold none of your data, are kept until you remove them.</li>
+        <li><strong>Uninstalling</strong> the App removes everything it stored on the device.</li>
+        <li><strong>Backups</strong> in your Google Drive or folder are yours; delete them there.</li>
+    </ul>
+    <p>For data held off the device (reports, crash and analytics data, security diagnostics), write to <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a>. Full steps, and what is kept and for how long, are on our <a href="https://nexus-syntegra.github.io/nexus-chat-resources/data_deletion.html">data deletion page</a>.</p>
 
     <h2>8. Location Data</h2>
-    <p>The App requests approximate (coarse) location permission only. Location data is:</p>
+    <p>The App requests approximate (coarse) location permission only, and uses location only when you have granted it.</p>
     <ul>
-        <li>Used only to enrich web search queries with geographic context when you enable this feature</li>
-        <li>Never stored persistently by the App</li>
-        <li>Never transmitted beyond the search query to your configured search provider</li>
-        <li>Never used for tracking, profiling, or advertising</li>
+        <li><strong>Chat context:</strong> each message you send carries a short context line with your time zone, local time and, if location permission is granted, your approximate city, state and country, so the assistant can answer "what time is it" or "near me" questions correctly. With an on-device model this never leaves the phone; with a remote AI backend, that backend receives it.</li>
+        <li><strong>Web search:</strong> when <strong>Settings &gt; Search &gt; Include Location</strong> is on and permission is granted, location context is added to searches. Brave Search receives approximate latitude and longitude, city, state, country, postal code and time zone; SerpAPI and Serpstack receive your country; other providers receive a city and state in the query text when the assistant decides a search needs it.</li>
+        <li><strong>Device tool:</strong> the assistant can read your approximate location through the device tool to answer a question you asked.</li>
+        <li><strong>Security diagnostics:</strong> Talsec derives an approximate location from your IP address (section 1.2). This does not use the location permission.</li>
     </ul>
+    <p>The App does not store your location and does not use it for tracking, profiling or advertising.</p>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be reflected in the "Effective Date" at the top of this page.</p>
+    <h2>9. Children's Privacy</h2>
+    <p>The App is rated for adults and is not intended for anyone under 18. It generates AI responses; a content-safety guard is on by default, but no filter catches everything, so the App is not suitable for children. We do not knowingly collect information from children.</p>
 
-    <h2>10. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us at:</p>
-    <p>Email: <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a></p>
+    <h2>10. Wear OS</h2>
+    <p>The watch app talks only to your paired phone, through the Wearable Data Layer. It does no inference, has no network code of its own, and sends nothing to us except through the phone (for example, a report you send from the watch, which never includes your prompt). Text and voice input on the watch use the system input surface, which your watch's own services handle.</p>
 
-    <h2>11. Third-Party Services</h2>
-    <p>The App may use the following third-party services when enabled:</p>
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy. Changes are reflected in the Effective Date at the top of this page.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>For questions about this policy or to exercise your rights, contact <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a>.</p>
+
+    <h2>13. Third-Party Services</h2>
     <ul>
+        <li><strong>Talsec (freeRASP):</strong> <a href="https://docs.talsec.app/freerasp/terms-of-service/user-data-policies">Talsec user data policy</a></li>
+        <li><strong>Google (Play, Play Integrity, Firebase, Cloud, Drive, Calendar, Tasks, Contacts, Gmail, Home, ML Kit):</strong> <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></li>
+        <li><strong>DuckDuckGo:</strong> <a href="https://duckduckgo.com/privacy">DuckDuckGo Privacy Policy</a></li>
         <li><strong>Brave Search:</strong> <a href="https://search.brave.com/privacy">Brave Privacy Policy</a></li>
         <li><strong>Tavily:</strong> <a href="https://tavily.com/privacy">Tavily Privacy Policy</a></li>
         <li><strong>SerpAPI:</strong> <a href="https://serpapi.com/privacy-policy">SerpAPI Privacy Policy</a></li>
         <li><strong>Serpstack:</strong> <a href="https://serpstack.com/privacy">Serpstack Privacy Policy</a></li>
-        <li><strong>Google (Drive, Calendar, Tasks, Contacts, Gmail, Home, Play Services):</strong> <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-        <li><strong>Firebase (Crashlytics &amp; Analytics):</strong> <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></li>
-        <li><strong>HuggingFace:</strong> <a href="https://huggingface.co/privacy">HuggingFace Privacy Policy</a></li>
-        <li><strong>GitHub (inference engine updates &amp; model catalog):</strong> <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
-        <li><strong>Home Assistant:</strong> Self-hosted; privacy governed by your Home Assistant instance configuration.</li>
+        <li><strong>Hugging Face:</strong> <a href="https://huggingface.co/privacy">Hugging Face Privacy Policy</a></li>
+        <li><strong>GitHub (model catalog):</strong> <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
+        <li><strong>Tailscale:</strong> <a href="https://tailscale.com/privacy-policy">Tailscale Privacy Policy</a></li>
         <li><strong>IFTTT:</strong> <a href="https://ifttt.com/privacy">IFTTT Privacy Policy</a></li>
+        <li><strong>Home Assistant:</strong> self-hosted; governed by your own instance.</li>
     </ul>
+
+    <h2>14. If You Are in the EEA, the UK or Switzerland</h2>
+    <p>This section applies in addition to everything above.</p>
+    <p><strong>Controller.</strong> Nexus Syntegra is the controller for the personal data described in this policy. Contact: <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a>. Google acts as our processor for Cloud Functions, Firestore, Crashlytics and Analytics; Talsec processes the security diagnostics.</p>
+    <p><strong>What we hold.</strong> Conversations, models, documents and memories stay on your device. What reaches us or our processors is: reports you send about AI replies, request logs from our Cloud Functions, security diagnostics, and crash and usage telemetry if you turn it on.</p>
+    <p><strong>Legal bases (GDPR Article 6).</strong></p>
+    <ul>
+        <li><strong>Consent (Art. 6(1)(a)):</strong> crash reports and usage analytics. Off by default, asked for during setup, withdrawable at any time in Settings &gt; Security &gt; Crash Reports &amp; Analytics. Withdrawing stops collection from that moment; it does not undo what was already sent. Your choice to include your prompt in a report is also consent.</li>
+        <li><strong>Performance of a contract (Art. 6(1)(b)):</strong> features you ask for: downloading a model, running a search, syncing a backup to your own Drive, calling a service you connected, sending a report.</li>
+        <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> security diagnostics, integrity checks and request logs, to protect the App and its users from tampering, fraud and abuse; and reviewing reported replies to make the App safer.</li>
+    </ul>
+    <p><strong>Your rights.</strong> You have the right to access, rectify, erase, restrict and object to processing, and to data portability. Most of these you exercise directly on the device (sections 6 and 7). For anything held off the device, write to <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a>. You may object to processing based on legitimate interests.</p>
+    <p><strong>Automated decision-making.</strong> None with legal or similarly significant effects. The App produces AI text at your request.</p>
+    <p><strong>International transfers.</strong> Google and Talsec may process data outside the EEA, UK or Switzerland, including in the United States, under their own safeguards such as Standard Contractual Clauses.</p>
+    <p><strong>Complaints.</strong> You may complain to your national data protection authority, or to the UK Information Commissioner's Office if you are in the UK. We would rather you told us first.</p>
+
+    <h2>15. AI Transparency and Reporting Content</h2>
+    <p><strong>You are interacting with an AI system.</strong> Replies are generated by an AI language model running on your device or on a backend you configured. They are not written or reviewed by a person, they can be confidently wrong, and they are not professional advice.</p>
+    <p><strong>Reporting a reply.</strong> Long-press an AI reply and choose <strong>Report Content</strong>, pick a reason, and tap <strong>Send report</strong>. Section 1.3 describes what is sent. If a report cannot be delivered, the App offers to share it another way.</p>
+    <p><strong>Contact point.</strong> For reports of illegal content, and for any other notice about the App, write to <a href="mailto:privacy@nexussyntegra.com">privacy@nexussyntegra.com</a>. Messages in English are accepted, from users and authorities alike.</p>
 </body>
 </html>
